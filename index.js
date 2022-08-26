@@ -1,6 +1,6 @@
-function isPalindrome(word) {
+// function isPalindrome(word) {
   // Write your algorithm here
-}
+// }
 
 /* 
   Add your pseudocode here
@@ -8,7 +8,22 @@ function isPalindrome(word) {
 
 /*
   Add written explanation of your solution here
+  // create a function that returns true if a word is a palindrome.
+  // this means that that the letters of the word are the same written in reverse as written in not reverse.
+
 */
+
+
+function isPalindrome(word) {
+  for (let startIndex = 0; startIndex < word.length / 2; startIndex++) {
+    const endIndex = word.length - 1 - startIndex;
+    if (word[startIndex] !== word[endIndex]) {
+      return false;
+    }
+  }
+
+  return true;
+}
 
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
